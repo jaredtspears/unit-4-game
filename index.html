@@ -11,24 +11,57 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- css file for the game, using boottrap mainly. This will be for any fine tuning style wise. -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <!--  -->
+
+  <!-- reset.css told to add in the hw, nothing pulling from here yet -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
 
 </head>
 <body>
 <header class="jumbotron"> <h1>The Amazing Crystal Game!</h1></header>
     <!-- main contianer for general content -->
-<div class= "container"></div>
-    <div class= "row"></div>
-        <div class="col-md-6">
+<div class= "container">
+    <div class= "row">
+        <!-- directions will be on the left 1/3 of screen -->
+        <div class="col-md-4">
           <div class="card">
                 <p>Directions for the game will go here...</p>
           </div>  
         </div>
-        
-
-
-
+        <!-- purple stone column -->
+        <div class="col-md-4">
+                <!-- id for purple stone -->
+            <div id="pStone">
+                <img class="crystal-image" src="https://df2sm3urulav.cloudfront.net/tenants/gr/uploads/images/545000-549999/546183/569cbf57ab567.jpg">
+            </div>
+        </div>
+        <!-- clear stone column -->
+        <div class="col-md-4">
+            <!-- id for clear stone -->
+            <div id="cStone">
+                <img class="crystal-image" src="http://www.roadtripsavings.com/images/blue-gem.jpg">
+            </div>
+        </div>
+    </div>
+    <!-- 2nd ro for the botton 2 blue and green stone images -->
+    <div class= "row">
+            <!-- empty div for spacing to match under the first two pictures -->
+            <div class="col-md-4"></div>
+        <!-- blue stone column -->
+        <div class="col-md-4">
+            <!-- id for blue stone -->
+            <div id="bStone">
+                <img class="crystal-image" src="https://i.pinimg.com/originals/b5/39/46/b53946d8b6dffbcf80db49a711bdc362.jpg">
+            </div>
+        </div>
+        <!-- green stone column -->
+        <div class="col-md-4">
+            <!-- id for green stone -->
+            <div id="gStone">
+                <img class="crystal-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT65M5apVjjKNVgmYFO4vkSW3PhY50z0eOPAFeaH8YV9uajF2Kk">
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- js file for the game -->
     <script src="assets/javascript/game.js"></script>
