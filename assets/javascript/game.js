@@ -11,7 +11,7 @@ function randomNum(max){
 $(document).ready(function(){
 
     var counter = 0;
-
+        
     /*calling for game restart with a call to rerun the intGame function to randomize the 
     crystals again with the numberOptions array. NOT WORKING, in debugger it calls the 
     game without clicking restart. */
@@ -105,17 +105,34 @@ $(document).ready(function(){
 
 
                 // integrated this alert into a bootstrap alert box.(reminder ln 7 locates var targetNumber)
+                  //set counter to zero, couldnt figure out the pausing of the game
                 if (counter === targetNumber) {
-                 $(".youWin").html("You won!?..That must have been luck - best out of 3! GO FASTER!" );
+                 $(".youWin").html("You won!?..That must have been luck - best out of 3! Hit the Restart button below.     GO FASTER!" );
+                    counter=0;
+                 //trying to figure out a function to not allow the counter to be anything other than zero.
+                    //  if(counter < 0){counter *=0;
+                    // var pauseGamePlay = 0;
+                    // counter * pauseGamePlay }  
+
+                    //or
+
+                    // function resetCount(){
+                    //     for(counter > 0) {
+                    //         return counter;
+                    //     };
+                    // }
                 }
 
                 // integrated this alert into a bootstrap alert box.
+                //set counter to zero, couldnt figure out the pausing of the game
                 else if (counter >= targetNumber) {
-                $(".youLose").html("You lost, the Crystals are supreme! Try again if you are not jaded by this experience." );
+                $(".youLose").html("You lost, the Crystals are supreme! Try again if you are not jaded by this experience. Hit the Restart button below." );
+                counter = 0;
                 }
 
     });
 
+  
     
     //mindful to be callign this intGame when page is loaded.
     intGame();
