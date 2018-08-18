@@ -16,11 +16,16 @@
     
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lobster|Yanone+Kaffeesatz" rel="stylesheet">
+    
     <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
+
     <!-- css file for the game, using boottrap mainly. This will be for any fine tuning style wise. -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/stye.css" />
 
@@ -45,28 +50,34 @@
             <div class="my-auto w-100 text-white">
                 <!-- title of the game -->
               <h1 class="display-3">The Amazing Crystal Game!</h1>
+                        <br><br><br><br><br><br><br>
+                    <!-- directions -->
+              <p>Click the stones and attempt to match the number below.</p>
             </div>
           </div>
         </div>
       </header>
  <!-- ________________________________________________________________________________________________________ -->
                          <!-- main contianer for general content -->
-<div class="container">
-    <div class="row">
-        <!-- directions will be on the left make the whole container width  -->
-        <div class="col-md-12">
-            <div class="card">
+<hr>
 
-                <p>Click the stones and attempt to match the number below.</p>
-            
-            </div>
+ <div class="container">
+    <div class="row">
+
+        <!-- alert for loosing. -->
+        <div class = "col-md-6">
+                <div class="alert alert-dark youLose" role="alert"></div>
         </div>
-                    
+
+        <!-- alert for winning -->
+        <div class = "col-md-6">
+                <div class="alert alert-dark youWin" role="alert"></div>  
+        </div>   
     </div>
 
     <!-- 2nd row for the botton 2 blue and green stone images -->
     <div class="row">
-        <div class=" col-md-4">
+        <div class=" col-lg-4 col-md-12">
             <div class="card">
 
                     <!-- created div for target number that will be displayed by js to show the target number -->
@@ -75,57 +86,60 @@
                     <!-- created div so that the current sum of the player can be displayed here, interactive with player's current choice -->
                     <div class="currentSummed"></div>
 
-                    <!-- will try to link the restart game option to this button in js "class added "restart""-->
-                    <button type="button" class="btn btn-dark restart">Restart</button>
+                    <!-- will try to link the restart game option to this button in js "class added "restart""
+                        oddly the pop over is not working... but the button functionality is working fine.-->
+                   
+                    <button type="button" class="btn btn-lg btn-dark restart" data-toggle="popover" title="Winning isn't everything, learning is!" data-content="Don't get jaded from losing!">Restart!</button>
             </div>
         </div>
 
                 
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-12">
 
-                    <!-- id for purple stone-->
-                    <div id="pCrystal" id = "0">image should go here</div>  
+                    <!-- id for purple stone named them crystals but changed them to stones in the styling of the page...it looked better-->
+                    <div class="pCrystal 0Crystal" ></div>  
         </div>
                     
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-12">
 
                     <!-- id for clear stone-->
-                    <div class="cCrystal">image should go here</div>
+                    <div class="cCrystal 1Crystal"></div>
         </div>    
     </div>
     <!-- 3rd row -->
     <div class="row">  
-        <div class="col-md-4"> </div>
-        <div class="col-md-4">
+        <div class="col-lg-4"> </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
                 
-                    <!-- id for blue stone -->
-                    <div class="bCrystal">image should go here</div>
+                    <!-- id for pearl stone -->
+                    <div class="pearlCrystal 2Crystal "></div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-12">
 
                     <!-- id for green stone -->
-                    <div class="gCrystal">image should go here</div>
+                    <div class="gCrystal 3Crystal"></div>
         </div>
     </div>
 </div>
 
 
+<hr>
 
 
-<!-- =============Commenting out the footer because it is wonky================== -->
 
-                                <!-- footer NOT PERFECT YET-->
-      <!-- <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <nav class="navbar fixed-bottom">  -->
-                         <!--footer text-->
-                        <!-- <h2 id="footer">***Creating & Designing since 2018***</h2>
+                            <!-- footer-->
+<div class="container"> 
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar bottom">  
+                            <!--footer text-->
+                        <h2 id="footer">***Creating & Designing since 2018***</h2>
                 </nav>
-              </div>
             </div>
-          </div>
-  =================================================================================-->
+        </div>
+   
+</div>
+
 
 
 

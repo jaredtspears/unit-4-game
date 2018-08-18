@@ -1,13 +1,15 @@
 /* setting custom css for image sizes and reactions
 */
-
+  
 .crystal-image {
-    widows: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+  
 }
 .crystal-image:hover {
-    background-color: silver;
+    background-color:rgb(95, 94, 94);
     padding: 5px;
+    border-radius: 25px;
 }
 
 header {
@@ -29,6 +31,9 @@ header {
   div {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size:20px;
+    display:block;
+    margin:auto;
+
    
   }
   
@@ -71,7 +76,8 @@ header {
     bottom: 0;
     padding:0px, 0px !important;
     width:100%;
-    background: darkslategrey;
+    background: rgb(95, 94, 94);
+    border-radius: 5px;
 
 }
 
